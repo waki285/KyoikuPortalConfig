@@ -45,7 +45,10 @@ $wgDiff3 = "/usr/bin/diff3";
 
 require_once "$IP/config/GlobalExtensions.php";
 
-$wgDatabaseVirtualDomains['virtual-globalblocking'] = 'centralauth';
+$wgVirtualDomainsMapping['virtual-centralauth'] = [ 'db' => 'centralauth' ];
+$wgVirtualDomainsMapping['virtual-globalblocking'] = [ 'db' => 'centralauth'];
+$wgVirtualDomainsMapping['virtual-oathauth'] = [ 'db' => 'centralauth' ];
+$wgVirtualDomainsMapping['virtual-importdump'] = [ 'db' => 'metawiki' ];
 
 require_once "$IP/config/MirahezeFunctions.php";
 $wi = new MirahezeFunctions();
