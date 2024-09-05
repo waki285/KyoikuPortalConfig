@@ -1,8 +1,17 @@
 <?php
+/**
+ * GlobalSettings.php
+ * Production global settings for KyoikuPortal
+ * This file is included by LocalSettings.php file
+ *
+ * @var string $IP
+ * @var mixed $wgConf
+ * @var mixed $wi
+ */
 
-# Protect against web entry
+// Protect against web entry
 if (!defined('MEDIAWIKI')) {
-    exit;
+	die('Not an entry point.');
 }
 
 if ( $wi->isExtensionActive( 'CirrusSearch' ) ) {
