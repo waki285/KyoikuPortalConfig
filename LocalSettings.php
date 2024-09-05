@@ -1052,9 +1052,9 @@ require_once __DIR__ . '/ManageWikiSettings.php';
 require_once "$IP/config/Database.php";
 
 
-if ( $wi->missing ) {
+/*if ( $wi->missing ) {
 	require_once '/var/www/mediawiki/ErrorPages/MissingWiki.php';
-}
+}*/
 
 if ( $cwDeleted ) {
 	if ( MW_ENTRY_POINT === 'cli' ) {
