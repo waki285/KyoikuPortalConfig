@@ -30,8 +30,6 @@ ini_set( 'xdebug.var_display_max_depth', - 1 );
 require_once "$IP/config/PrivateSettings.php";
 
 $wgConf->suffixes = [ 'wiki' ];
-$wgUploadPath = "/images";
-$wgUploadDirectory = "$IP/images";
 
 $wmgUploadHostname = 'kyoikuportal.com';
 
@@ -1051,6 +1049,8 @@ require_once __DIR__ . '/ManageWikiSettings.php';
 //var_dump($wgConf->settings);
 require_once "$IP/config/Database.php";
 
+$wgUploadPath = "/images/$wgDBname";
+$wgUploadDirectory = "$IP/images/$wgDBname";
 
 /*if ( $wi->missing ) {
 	require_once '/var/www/mediawiki/ErrorPages/MissingWiki.php';
