@@ -243,6 +243,11 @@ $wgConf->settings += [
 		],
 	],
 
+	// template
+	'wgEnableScaryTranscluding' => [
+		'default' => true,
+	],
+
 	// ==================
 	// EXTENSION SETTINGS
 	// ==================
