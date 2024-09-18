@@ -248,6 +248,28 @@ $wgConf->settings += [
 		'default' => true,
 	],
 
+	// permissions
+	'+wgRevokePermissions' => [
+		'default' => [],
+		'+metawiki' => [
+			'requestwikiblocked' => [
+				'requestwiki' => true,
+			],
+		],
+		'+ext-MediaWikiChat' => [
+			'blockedfromchat' => [
+				'chat' => true,
+			],
+		],
+	],
+	'wgImplicitGroups' => [
+		'default' => [
+			'*',
+			'user',
+			'autoconfirmed'
+		],
+	],
+
 	// ==================
 	// EXTENSION SETTINGS
 	// ==================
@@ -634,6 +656,7 @@ $wgConf->settings += [
 	],
 	'wgManageWikiPermissionsAdditionalRemoveGroups' => [
 		'default' => [],
+
 	],
 	'wgManageWikiPermissionsDisallowedRights' => [
 		'default' => [
