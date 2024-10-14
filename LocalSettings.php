@@ -52,6 +52,8 @@ $wgVirtualDomainsMapping['virtual-globalblocking'] = [ 'db' => 'centralauth'];
 $wgVirtualDomainsMapping['virtual-oathauth'] = [ 'db' => 'centralauth' ];
 $wgVirtualDomainsMapping['virtual-importdump'] = [ 'db' => 'metawiki' ];
 
+$wgCreateWikiUsePhpCache = true;
+
 require_once "$IP/config/MirahezeFunctions.php";
 $wi = new MirahezeFunctions();
 
