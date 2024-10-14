@@ -312,6 +312,11 @@ class MirahezeFunctions {
 			return 'cramschoolwiki';
 		}
 
+		if ($hostname === 'bruh.suzuneeu.com') {
+			trigger_error("これは警告です。", E_USER_WARNING);
+			$hostname = 'beta.kyoikuportal.com';
+		}
+
 		static $database = null;
 
 		$database ??= self::readDbListFile( 'production', true, 'https://' . $hostname, true ) ?:
@@ -497,7 +502,7 @@ class MirahezeFunctions {
 	public static function getMediaWiki( string $file ): string {
 		global $IP;
 
-		$IP = self::MEDIAWIKI_DIRECTORY . self::getMediaWikiVersion();
+		$IP = self::MEDIAWIKI_DIRECTORY;
 
 		chdir( $IP );
 		putenv( "MW_INSTALL_PATH=$IP" );
