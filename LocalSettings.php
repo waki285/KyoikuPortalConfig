@@ -75,6 +75,13 @@ $wgConf->settings += [
 	// CORE SETTINGS
 	// =============
 
+	// limits
+	'wgMaxArticleSize' => [
+		'default' => 1024 * 2,
+		// special
+		'taisakuarchivewikiwiki' => 1024 * 128,
+	],
+
 	// mail
 	'wgEnableEmail' => [
 		'default' => true,
@@ -377,7 +384,7 @@ $wgConf->settings += [
 		'default' => 'wikidb',
 	],
 	'wgCreateWikiUseJobQueue' => [
-		'default' => true,
+		'default' => false,
 	],
 	'wgCreateWikiCategories' => [
 		'default' => [

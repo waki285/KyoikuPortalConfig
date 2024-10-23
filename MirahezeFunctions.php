@@ -627,6 +627,7 @@ class MirahezeFunctions {
 		if ( $tmpFile ) {
 			if ( file_put_contents( $tmpFile, '<?php return ' . var_export( $configObject, true ) . ';' ) ) {
 				if ( rename( $tmpFile, self::CACHE_DIRECTORY . '/' . $cacheShard ) ) {
+					chmod(self::CACHE_DIRECTORY . '/' . $cacheShard, 0777);
 					return;
 				}
 			}
@@ -916,6 +917,7 @@ class MirahezeFunctions {
 				'return ' . var_export( $list, true ) . ";\n";
 
 			file_put_contents( self::CACHE_DIRECTORY . '/' . $this->version . '/extension-list.php', $phpContent, LOCK_EX );
+			chmod(self::CACHE_DIRECTORY . '/' . $this->version . '/extension-list.php', 0777);
 		} else {
 			$list = include self::CACHE_DIRECTORY . '/' . $this->version . '/extension-list.php';
 		}
