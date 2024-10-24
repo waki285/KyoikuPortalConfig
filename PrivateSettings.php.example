@@ -1,0 +1,29 @@
+<?php
+
+# Protect against web entry
+if (!defined('MEDIAWIKI')) {
+    exit;
+}
+
+$wgDBtype = "mysql";
+$wgDBserver = "localhost";
+$wgDBuser = "mwuser";
+$wgDBpassword = "redacted";
+
+$wgSecretKey = "redacted";
+
+$wgAuthenticationTokenVersion = "1";
+
+$wgUpgradeKey = "redacted";
+
+$wgSMTP = [
+    'host' => 'ssl://smtp.gmail.com',  // hostname of the email server
+    'IDHost' => 'kyoikuportal.com',
+    'port' => 465,
+    'username' => 'redacted@gmail.com', // user of the email account
+    'password' => 'redacted',  // app password of the email account
+    'auth' => true
+];
+
+$wgTurnstileSecretKey = 'redacted';
+
