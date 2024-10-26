@@ -665,6 +665,8 @@ class MirahezeFunctions {
 		static $cacheArray = null;
 		$cacheArray ??= self::getCacheArray();
 
+		wfDebugLog("MirahezeFunctions", json_encode($cacheArray));
+
 		if ( !$cacheArray ) {
 			return [];
 		}
