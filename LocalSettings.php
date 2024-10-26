@@ -1091,9 +1091,9 @@ require_once "$IP/config/Database.php";
 $wgUploadPath = "/images/$wgDBname";
 $wgUploadDirectory = "$IP/images/$wgDBname";
 
-if ( $wi->missing ) {
-	require_once '/var/www/mediawiki/ErrorPages/MissingWiki.php';
-}
+#if ( $wi->missing ) {
+#	require_once '/var/www/mediawiki/ErrorPages/MissingWiki.php';
+#}
 
 if ( $cwDeleted ) {
 	if ( MW_ENTRY_POINT === 'cli' ) {
@@ -1110,9 +1110,9 @@ function wfHandleDeletedWiki() {
 require_once "$IP/config/GlobalSettings.php";
 
 // Define last - Extension message files for loading extensions
-/*if (file_exists(__DIR__ . '/ExtensionMessageFiles-' . $wi->version . '.php') && !defined('MW_NO_EXTENSION_MESSAGES')) {
-	//require_once __DIR__ . '/ExtensionMessageFiles-' . $wi->version . '.php';
-}*/
+#if (file_exists(__DIR__ . '/ExtensionMessageFiles-' . $wi->version . '.php') && !defined('MW_NO_EXTENSION_MESSAGES')) {
+	#require_once __DIR__ . '/ExtensionMessageFiles-' . $wi->version . '.php';
+#}
 
 unset( $wi );
 
