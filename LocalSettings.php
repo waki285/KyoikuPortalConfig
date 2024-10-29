@@ -521,7 +521,7 @@ $wgConf->settings += [
 	'wgCreateWikiEnableManageInactiveWikis' => [
 		'default' => true,
 	],
-	'wgCreateWikiSQLfiles' => [
+	'wgCreateWikiSQLFiles' => [
 		'default' => [
 			"$IP/maintenance/tables-generated.sql",
 			"$IP/extensions/AbuseFilter/db_patches/mysql/tables-generated.sql",
